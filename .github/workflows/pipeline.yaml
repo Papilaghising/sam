@@ -11,7 +11,7 @@ on:
       - 'feature**'
 
 env:
-  SAM_TEMPLATE: pipeline.yaml
+  SAM_TEMPLATE: template.yaml
   TESTING_STACK_NAME: uni-prop-dev-contracts
   TESTING_PIPELINE_EXECUTION_ROLE: arn:aws:iam::426857564226:role/aws-sam-cli-managed-dev-pipel-PipelineExecutionRole-6K5W1znnHtos
   TESTING_CLOUDFORMATION_EXECUTION_ROLE: arn:aws:iam::426857564226:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionRo-98oPjZkgIrX7
