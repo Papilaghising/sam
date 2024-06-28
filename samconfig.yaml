@@ -5,7 +5,7 @@ default:
     parameters:
       stack_name: uni-prop-local-contracts
       s3_prefix: uni-prop-local-contracts
-      resolve_s3: true
+      # resolve_s3: true
       resolve_image_repositories: true
   build:
     parameters:
