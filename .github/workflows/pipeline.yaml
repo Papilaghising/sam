@@ -99,6 +99,7 @@ jobs:
         run: |
           sam deploy --stack-name $(echo ${GITHUB_REF##*/} | tr -cd '[a-zA-Z0-9-]') \
             --capabilities CAPABILITY_IAM \
+            --capabilities CAPABILITY_AUTO_EXPAND \
             --region ${TESTING_REGION} \
             --s3-bucket ${TESTING_ARTIFACTS_BUCKET} \
             --no-fail-on-empty-changeset \
@@ -232,6 +233,7 @@ jobs:
           sam deploy --stack-name ${PROD_STACK_NAME} \
             --template packaged-prod.yaml \
             --capabilities CAPABILITY_IAM \
+            --capabilities CAPABILITY_AUTO_EXPAND \
             --region ${PROD_REGION} \
             --s3-bucket ${PROD_ARTIFACTS_BUCKET} \
             --no-fail-on-empty-changeset \
